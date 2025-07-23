@@ -227,7 +227,7 @@ st.markdown(
       <img src="data:image/png;base64,{etri_b64}"
            style="width:37%; max-width:110px; height:auto;" />
       <img src="data:image/png;base64,{chonnam_b64}"
-           style="width:66%; max-width:160px; height:auto;" />
+           style="width:66%; max-width:170px; height:auto;" />
     </div>
     """,
     unsafe_allow_html=True
