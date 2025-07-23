@@ -45,7 +45,7 @@ distress = st.text_area("Experience of Distress:", height=150)
 # ------------------------------------------
 if st.button("Predict Depression"):
     if not happy or not distress:
-        st.error("Both transcripts are required to make a prediction.")
+        st.error("Both texts are required to make a prediction.")
         st.stop()
 
     # Build messages for ChatCompletion
