@@ -73,7 +73,7 @@ if st.button("Predict Depression"):
         ],
         temperature=0,
         top_p=1,
-        logprobs=True,top_logprobs=20,do_sample=False,
+        logprobs=True,top_logprobs=20,
         max_tokens=2000,
     )
 
