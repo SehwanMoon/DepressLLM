@@ -30,7 +30,7 @@ st.markdown(
     f"""
     <div style="display:flex; align-items:center;">
       <div style="flex:3; min-width:80px;">
-        <img src="data:image/png;base64,{b64}" style="width:100%; height:auto;" />
+        <img src="data:image/png;base64,{b64}" style="width:110%; height:auto;" />
       </div>
       <div style="flex:7; padding-left:1rem;">
         <h1 style="margin:0;">DepressLLM</h1>
