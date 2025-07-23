@@ -25,8 +25,8 @@ col1.image(app_logo,     width=1080)
 st.markdown(
     """
     ## DepressLLM  
-    _A Domain-Adapted Large Language Model Leveraging Real-World Narrative Recordings for Interpretable Depression Detection_  
-    **Developed by Chonnam National University & ETRI**  
+    DepressLLM was developed through domain‑adaptive fine‑tuning of the GPT‑4.1 model.
+    We are currently preparing a manuscript entitled ‘A Domain‑Adapted Large Language Model Leveraging Real‑World Narrative Recordings for Interpretable Depression Detection.’
     """,
     unsafe_allow_html=True
 )
