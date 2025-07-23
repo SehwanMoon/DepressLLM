@@ -131,7 +131,7 @@ if st.button("Predict Depression"):
 # Footer: 기관 로고 & 문구
 # ------------------------------------------
 st.markdown("---")
-f1, f2 = st.columns(2)
+f1, f2 = st.columns([1,1.2,3])
 f1.image( os.path.join(BASE_DIR, "etri2.png"),    width=2056)
 f2.image(os.path.join(BASE_DIR, "chonnam.png"), width=2056)
 st.markdown(
