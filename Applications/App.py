@@ -197,7 +197,7 @@ st.markdown(
         Electronics and Telecommunications Research Institute (ETRI)
       </span>
       &amp;
-      <span style="color:#007847; font-weight:bold;">
+      <span style="color:#004098; font-weight:bold;">
         Chonnam National University
       </span>
     </p>
