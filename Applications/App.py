@@ -91,7 +91,8 @@ if st.button("Predict Depression"):
     # --------------------------------------
     content = response.choices[0].message.content
     lines   = content.splitlines()
-    print(lines)
+    st.markdown(lines)
+  
     try:
         score = int(lines[0].strip())
     except ValueError:
