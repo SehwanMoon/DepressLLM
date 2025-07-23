@@ -99,7 +99,20 @@ if st.button("Predict Depression"):
     top_logprobs = response.choices[0].logprobs.content[0].top_logprobs
     token_probs  = [[entry.token, float(np.exp(entry.logprob)*100)] for entry in top_logprobs]
     df_probs     = pd.DataFrame(token_probs, columns=["Token","Prob (%)"])
-
+    def safe_int(x):
+        try:
+            return int(x)
+        except:
+            return None
+    
+    # 1) 숫자 변환 컬럼 추가
+    df_probs["num"] = df_probs["Token"].apply(safe_int)
+    
+    # 2) 0~27 범위 필터링
+    df_filtered = df_probs[df_probs["num"].between(0, 27)]
+    
+    # 3) 불필요한 임시 컬럼 제거
+    df_filtered = df_filtered.drop(columns=["num"])
     # --------------------------------------
     # Grouped probability & confidence
     # --------------------------------------
@@ -118,17 +131,17 @@ if st.button("Predict Depression"):
     # --------------------------------------
     # Display Results
     # --------------------------------------
-    st.subheader(f"Predicted PHQ-9 Score: {score}")
+    st.markdown(f"Predicted PHQ-9 Score: {score}")
     st.markdown(f"**Explanation:** {explanation}")
     st.markdown(f"**Significant words/phrases:** {significant}")
     st.markdown("---")
-    st.write("**Top token probabilities:**")
-    st.dataframe(df_probs)
+    st.write("**Top PHQ Score Token probabilities:**")
+    st.dataframe(df_filtered)
     st.write(f"**Grouped probability** (0–4 vs 5–27): {pct0_4:.2f}% vs {pct5_27:.2f}%")
 
     
     st.write(f"**Confidence:** {confidence:.2f}")
-    st.write(f"**Depression predicted?** {'Yes' if depression else 'No'}") 
+    st.write(f"**Depressive symptoms predicted?** {'Yes' if depression else 'No'}")
 
 # ------------------------------------------
 # Footer: 기관 로고 & 문구
