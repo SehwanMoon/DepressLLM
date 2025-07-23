@@ -132,7 +132,7 @@ if st.button("Predict Depression"):
 # ------------------------------------------
 st.markdown("---")
 st.markdown(
-    '####  <p style="font-size:12px;">
+    '<p style="font-size:12px;">
       Developed by 
       <span style="color:#005CA9; font-weight:bold;">
         Electronics and Telecommunications Research Institute (ETRI)
