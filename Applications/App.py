@@ -14,9 +14,12 @@ client = OpenAI(api_key=API_KEY)
 # ------------------------------------------
 # App Layout
 # ------------------------------------------
-app_logo      = "/logo.png"
-chonnam_logo  =  "/chonnam.png"
-etri_logo     =  "/etri.png"
+# 이 파일(App.py)의 디렉터리 경로
+BASE_DIR = os.path.dirname(__file__)
+
+app_logo      = os.path.join(BASE_DIR, "logo.png")
+chonnam_logo  =  os.path.join(BASE_DIR, "chonnam.png")
+etri_logo     =  os.path.join(BASE_DIR, "etri.png")
 
 col1, col2, col3 = st.columns([1,1,8])
 col1.image(app_logo,     width=60)
