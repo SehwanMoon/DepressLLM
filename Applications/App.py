@@ -132,7 +132,7 @@ if st.button("Predict Depression"):
 # ------------------------------------------
 st.markdown("---")
 st.markdown(
-    "**Developed by  Electronics and Telecommunications Research Institute (ETRI) & Chonnam National University &**"
+    "Developed by  Electronics and Telecommunications Research Institute (ETRI) & Chonnam National University"
 )
 
 f1, f2, f3  = st.columns([1,1.1,4])
