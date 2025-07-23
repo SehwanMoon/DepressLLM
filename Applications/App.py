@@ -35,7 +35,10 @@ st.markdown(
       <div style="flex:7; padding-left:1rem;">
         <h1 style="margin:0;">DepressLLM</h1>
         <p style="margin:0.5rem 0 0;">
-          …설명 텍스트…
+          DepressLLM was developed through domain‑adaptive fine‑tuning of the GPT‑4.1 model.<br>
+          It predicts depression based on Experience of Happiness and Experience of Distress data.<br>
+          We are currently preparing a paper entitled<br>
+          <strong>‘A Domain‑Adapted Large Language Model Leveraging Real‑World Narrative Recordings for Interpretable Depression Detection.’
         </p>
       </div>
     </div>
@@ -202,7 +205,22 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-f0, f1, f4,f2, f3  = st.columns([1.7,1,0.5,1.1,1.7])
-f1.image( os.path.join(BASE_DIR, "etri2.png"),    use_container_width =True)
-f2.image(os.path.join(BASE_DIR, "chonnam.png"),use_container_width =True)
+# 2개 컬럼으로 간단히
+col1, col2 = st.columns(2)
+
+# 컬럼 폭에 맞춰 자동 크기 조정
+col1.image(os.path.join(BASE_DIR, "etri2.png"),    use_column_width=True)
+col2.image(os.path.join(BASE_DIR, "chonnam.png"),  use_column_width=True)
+
+# 바로 아래에 가운데 텍스트
+st.markdown(
+    """
+    <p style="text-align:center; font-size:14px; margin-top:0.5rem;">
+      Developed by
+      <span style="color:#005CA9; font-weight:bold;">ETRI</span>
+      &amp;
+      <span style="color:#007847; font-weight:bold;">Chonnam National University</span>
+    </p>
+    """,
+    unsafe_allow_html=True
 
