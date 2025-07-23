@@ -19,34 +19,27 @@ client = OpenAI(api_key=API_KEY)
 # 이 파일(App.py)의 디렉터리 경로
 logo_url = "https://raw.githubusercontent.com/SehwanMoon/DepressLLM/main/Applications/logo.png"
 
+import streamlit as st
+import os, base64
+
+BASE_DIR = os.path.dirname(__file__)
+logo_path = os.path.join(BASE_DIR, "logo.png")
+
+# 이미지 파일을 읽어서 base64로 인코딩
+with open(logo_path, "rb") as f:
+    data = f.read()
+b64 = base64.b64encode(data).decode()
+
 st.markdown(
     f"""
-    <div style="
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-bottom: 1rem;
-    ">
-      <!-- 왼쪽 30% -->
-      <div style="
-          flex: 3;
-          min-width: 80px;  /* 너무 작아지지 않도록 최소 폭 지정 */
-      ">
-        <img src="{logo_url}" style="width:100%; height:auto;" />
+    <div style="display:flex; align-items:center;">
+      <div style="flex:3; min-width:80px;">
+        <img src="data:image/png;base64,{b64}" style="width:100%; height:auto;" />
       </div>
-
-      <!-- 오른쪽 70% -->
-      <div style="
-          flex: 7;
-          min-width: 150px;
-          padding-left: 1rem;
-      ">
-        <h1 style="margin:0; font-size:2rem;">DepressLLM</h1>
-        <p style="margin:0.5rem 0 0; line-height:1.4;">
-          DepressLLM was developed through domain‑adaptive fine‑tuning of the GPT‑4.1 model.<br>
-          It predicts depression based on Experience of Happiness and Experience of Distress data.<br>
-          We are currently preparing a paper entitled<br>
-          <strong>‘A Domain‑Adapted Large Language Model Leveraging Real‑World Narrative Recordings for Interpretable Depression Detection.’</strong>
+      <div style="flex:7; padding-left:1rem;">
+        <h1 style="margin:0;">DepressLLM</h1>
+        <p style="margin:0.5rem 0 0;">
+          …설명 텍스트…
         </p>
       </div>
     </div>
