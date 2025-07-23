@@ -14,8 +14,17 @@ client = OpenAI(api_key=API_KEY)
 # ------------------------------------------
 # App Layout
 # ------------------------------------------
+logo_path = "logo.png"
 st.set_page_config(page_title="Depression Prediction App", layout="centered")
-st.title("🧠 Depression Prediction with Explanation & Confidence")
+st.markdown(
+    f"""
+    <h1 style="display: flex; align-items: center;">
+      <img src="{logo_path}" width="40" style="margin-right: 8px;"/>
+      Depression Prediction with Explanation &amp; Confidence
+    </h1>
+    """,
+    unsafe_allow_html=True
+)
 
 # ------------------------------------------
 # User Inputs
