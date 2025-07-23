@@ -24,7 +24,7 @@ app_logo = os.path.join(BASE_DIR, "logo.png")
 col1, col2 = st.columns([3, 8])
 
 # 왼쪽에는 로고
-col1.image(app_logo, width=2054)
+col1.image(app_logo, use_column_width=True)
 
 # 오른쪽에는 제목과 설명
 col2.markdown(
@@ -196,6 +196,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 f0, f1, f4,f2, f3  = st.columns([1.7,1,0.5,1.1,1.7])
-f1.image( os.path.join(BASE_DIR, "etri2.png"),    width=2056)
-f2.image(os.path.join(BASE_DIR, "chonnam.png"), width=2056)
+f1.image( os.path.join(BASE_DIR, "etri2.png"),    use_column_width=True)
+f2.image(os.path.join(BASE_DIR, "chonnam.png"),use_column_width=True)
 
