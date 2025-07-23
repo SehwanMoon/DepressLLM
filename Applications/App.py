@@ -17,23 +17,41 @@ client = OpenAI(api_key=API_KEY)
 # App Layout
 # ------------------------------------------
 # 이 파일(App.py)의 디렉터리 경로
-BASE_DIR = os.path.dirname(__file__)
+logo_url = "https://raw.githubusercontent.com/SehwanMoon/DepressLLM/logo.png"
 
-app_logo = os.path.join(BASE_DIR, "logo.png")
+st.markdown(
+    f"""
+    <div style="
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 1rem;
+    ">
+      <!-- 왼쪽 30% -->
+      <div style="
+          flex: 3;
+          min-width: 80px;  /* 너무 작아지지 않도록 최소 폭 지정 */
+      ">
+        <img src="{logo_url}" style="width:100%; height:auto;" />
+      </div>
 
-col1, col2 = st.columns([1, 4])
-
-# 왼쪽에는 로고
-col1.image(app_logo, use_container_width =True)
-
-# 오른쪽에는 제목과 설명
-col2.markdown(
-    """
-    # DepressLLM  
-    DepressLLM was developed through domain‑adaptive fine‑tuning of the GPT‑4.1 model. 
-    It predicts depression based on Experience of Happiness and Experience of Distress data. We are currently preparing a paper entitled **‘A Domain‑Adapted Large Language Model Leveraging Real‑World Narrative Recordings for Interpretable Depression Detection.’**
+      <!-- 오른쪽 70% -->
+      <div style="
+          flex: 7;
+          min-width: 150px;
+          padding-left: 1rem;
+      ">
+        <h1 style="margin:0; font-size:2rem;">DepressLLM</h1>
+        <p style="margin:0.5rem 0 0; line-height:1.4;">
+          DepressLLM was developed through domain‑adaptive fine‑tuning of the GPT‑4.1 model.<br>
+          It predicts depression based on Experience of Happiness and Experience of Distress data.<br>
+          We are currently preparing a paper entitled<br>
+          <strong>‘A Domain‑Adapted Large Language Model Leveraging Real‑World Narrative Recordings for Interpretable Depression Detection.’</strong>
+        </p>
+      </div>
+    </div>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 # ------------------------------------------
 # User Inputs
