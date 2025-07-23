@@ -14,9 +14,9 @@ client = OpenAI(api_key=API_KEY)
 # ------------------------------------------
 # App Layout
 # ------------------------------------------
-app_logo      = "https://raw.githubusercontent.com/SehwanMoon/DepressLLM/Applications/logo.png"
-chonnam_logo  =  "https://raw.githubusercontent.com/SehwanMoon/DepressLLM/Applications/chonnam.png"
-etri_logo     =  "https://raw.githubusercontent.com/SehwanMoon/DepressLLM/Applications/etri.png"
+app_logo      = "/logo.png"
+chonnam_logo  =  "/chonnam.png"
+etri_logo     =  "/etri.png"
 
 col1, col2, col3 = st.columns([1,1,8])
 col1.image(app_logo,     width=60)
