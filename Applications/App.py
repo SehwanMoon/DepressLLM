@@ -153,11 +153,10 @@ if st.button("Predict Depression"):
     import matplotlib.pyplot as plt
     
     fig, ax = plt.subplots(figsize=(10,4))
-    fig.patch.set_facecolor('#f5f5dc')   # figure 바탕
 
     # 2) axes(플롯 영역) 배경색 설정
-    ax.set_facecolor('#f5f5dc')
-    ax.bar(nums, probs, color=colors)
+    ax.set_facecolor('#f5f5f0')
+    ax.bar(nums, probs, color=colors, width=0.8)
     ax.set_xticks(nums)
     ax.set_xlabel("PHQ‑9 Score Token")
     ax.set_ylabel("Probability (%)")
