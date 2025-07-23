@@ -91,13 +91,9 @@ if st.button("Predict Depression"):
     # --------------------------------------
     content = response.choices[0].message.content
     lines   = content.splitlines()
-    st.markdown(lines)
-  
-    try:
-        score = int(lines[0].strip())
-    except ValueError:
-        score = None
-
+    import re
+    m = re.match(r"PHQ-9 score:\s*(\d+)", lines[0])
+    score = int(m.group(1))
     explanation = ""
     significant = ""
     for line in lines:
