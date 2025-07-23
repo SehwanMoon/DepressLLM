@@ -134,5 +134,5 @@ st.markdown("---")
 f1, f2, f3 = st.columns([2.5,2,5.5])
 f1.image( os.path.join(BASE_DIR, "etri.png"),    width=5012)
 f2.image(os.path.join(BASE_DIR, "chonnam.png"), width=2056)
-st.markdown("### Developed by ETRI & Chonnam National University")
+st.markdown("##### Developed by ETRI & Chonnam National University")
 
