@@ -29,6 +29,7 @@ col2.markdown(
     """
     # DepressLLM  
     DepressLLM was developed through domain‑adaptive fine‑tuning of the GPT‑4.1 model. 
+    It predicts depression based on Experience of Happiness and Experience of Distress data. We are currently preparing a paper entitled **‘A Domain‑Adapted Large Language Model Leveraging Real‑World Narrative Recordings for Interpretable Depression Detection.’**
     """,
     unsafe_allow_html=True
 )
