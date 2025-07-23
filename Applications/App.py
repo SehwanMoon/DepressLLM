@@ -14,8 +14,7 @@ client = OpenAI(api_key=API_KEY)
 # ------------------------------------------
 # App Layout
 # ------------------------------------------
-BASE_DIR = os.path.dirname(__file__)
-logo_path = os.path.join(BASE_DIR, "logo.png")
+logo_url = "https://raw.githubusercontent.com/SehwanMoon/DepressLLM/Applications/logo.png"
 
 col1, col2 = st.columns([1, 8])
 col1.image(logo_path, width=40)
