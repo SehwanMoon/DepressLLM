@@ -208,7 +208,6 @@ st.markdown(
 etri_path    = os.path.join(BASE_DIR, "etri2.png")
 chonnam_path = os.path.join(BASE_DIR, "chonnam.png")
 
-# Base64 인코딩 함수
 def img_b64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
@@ -216,17 +215,21 @@ def img_b64(path):
 etri_b64    = img_b64(etri_path)
 chonnam_b64 = img_b64(chonnam_path)
 
-# Footer: 두 개 컬럼
-col1, col2 = st.columns(2)
-
-# 컬럼 폭의 46%로 설정
-col1.markdown(
-    f'<img src="data:image/png;base64,{etri_b64}" '
-    'style="width:37%; height:auto; display:block; margin:0 auto;" />',
-    unsafe_allow_html=True
-)
-col2.markdown(
-    f'<img src="data:image/png;base64,{chonnam_b64}" '
-    'style="width:39%; height:auto; display:block; margin:0 auto;" />',
+st.markdown(
+    f"""
+    <div style="
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;       /* 한 줄로 고정 */
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;               /* 로고 사이 간격 */
+    ">
+      <img src="data:image/png;base64,{etri_b64}"
+           style="width:37%; max-width:120px; height:auto;" />
+      <img src="data:image/png;base64,{chonnam_b64}"
+           style="width:39%; max-width:120px; height:auto;" />
+    </div>
+    """,
     unsafe_allow_html=True
 )
