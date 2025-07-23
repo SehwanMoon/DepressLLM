@@ -149,7 +149,7 @@ if st.button("Predict Depression"):
 st.markdown("---")
 st.markdown(
     """
-    <p style="font-size:15px; text-align:center;">
+    <p style="font-size:14.5px; text-align:center;">
       Developed by 
       <span style="color:#005CA9; font-weight:bold;">
         Electronics and Telecommunications Research Institute (ETRI)
