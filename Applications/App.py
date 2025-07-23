@@ -137,6 +137,36 @@ if st.button("Predict Depression"):
     st.markdown("---")
     st.write("**Top PHQ Score Token probabilities:**")
     st.dataframe(df_filtered)
+    df_filtered["num"] = df_filtered["Token"].astype(int)
+    probs = (
+        df_filtered
+        .set_index("num")["Prob (%)"]
+        .reindex(range(28), fill_value=0)
+        .values
+    )
+    
+    # 3) 색상 지정 (0–9 초록, 10–27 빨강)
+    nums   = np.arange(28)
+    colors = ["green" if n < 10 else "red" for n in nums]
+    
+    # 4) 차트 그리기
+    import matplotlib.pyplot as plt
+    
+    fig, ax = plt.subplots(figsize=(10,4))
+    ax.bar(nums, probs, color=colors)
+    ax.set_xticks(nums)
+    ax.set_xlabel("PHQ‑9 Score Token")
+    ax.set_ylabel("Probability (%)")
+    ax.set_title("SToPS (Score‑guided Token Probability Summation)")
+    ax.grid(axis="y", alpha=0.3)
+    
+    # 5) 구간 합계 텍스트
+    sum_norm = probs[:5].sum()
+    sum_dep  = probs[5:].sum()
+    ax.text(4.5, max(probs)*1.05, f"Sum (<5) = {sum_norm:.1f}%", ha="center", color="green")
+    ax.text(18.5, max(probs)*1.05, f"Sum (5–27) = {sum_dep:.1f}%", ha="center", color="red")
+    
+    st.pyplot(fig)
     st.write(f"**Grouped probability** (0–4 vs 5–27): {pct0_4:.2f}% vs {pct5_27:.2f}%")
 
     
