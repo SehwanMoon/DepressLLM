@@ -17,7 +17,7 @@ client = OpenAI(api_key=API_KEY)
 # 이 파일(App.py)의 디렉터리 경로
 BASE_DIR = os.path.dirname(__file__)
 
-app_logo      = os.path.join(BASE_DIR, "logo.png")
+app_logo = os.path.join(BASE_DIR, "logo.png")
 
 col1, col2 = st.columns([2.2, 8])
 
