@@ -13,11 +13,7 @@ API_KEY = st.secrets["OPENAI_API_KEY"]
 FT_MODEL = st.secrets["FT_MODEL"]
 
 client = OpenAI(api_key=API_KEY)
-# ------------------------------------------
-# App Layout
-# ------------------------------------------
-# 이 파일(App.py)의 디렉터리 경로
-logo_url = "https://raw.githubusercontent.com/SehwanMoon/DepressLLM/main/Applications/logo.png"
+
 
 import streamlit as st
 import os, base64
