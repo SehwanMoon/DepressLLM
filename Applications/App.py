@@ -14,7 +14,7 @@ client = OpenAI(api_key=API_KEY)
 # ------------------------------------------
 # App Layout
 # ------------------------------------------
-logo_path = "logo.png"
+logo_path = "DepressLLM/Applications/logo.png"
 st.set_page_config(page_title="Depression Prediction App", layout="centered")
 st.markdown(
     f"""
