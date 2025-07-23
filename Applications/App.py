@@ -222,11 +222,11 @@ col1, col2 = st.columns(2)
 # 컬럼 폭의 46%로 설정
 col1.markdown(
     f'<img src="data:image/png;base64,{etri_b64}" '
-    'style="width:46%; height:auto; display:block; margin:0 auto;" />',
+    'style="width:39%; height:auto; display:block; margin:0 auto;" />',
     unsafe_allow_html=True
 )
 col2.markdown(
     f'<img src="data:image/png;base64,{chonnam_b64}" '
-    'style="width:50%; height:auto; display:block; margin:0 auto;" />',
+    'style="width:42%; height:auto; display:block; margin:0 auto;" />',
     unsafe_allow_html=True
 )
