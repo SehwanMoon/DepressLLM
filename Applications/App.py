@@ -225,7 +225,7 @@ st.markdown(
         gap: 3rem;               /* 로고 사이 간격 */
     ">
       <img src="data:image/png;base64,{etri_b64}"
-           style="width:37%; max-width:120px; height:auto;" />
+           style="width:37%; max-width:110px; height:auto;" />
       <img src="data:image/png;base64,{chonnam_b64}"
            style="width:66%; max-width:160px; height:auto;" />
     </div>
