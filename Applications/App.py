@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(__file__)
 
 app_logo      = os.path.join(BASE_DIR, "logo.png")
 
-col1, col2 = st.columns([2.5, 7.5])
+col1, col2 = st.columns([3, 3])
 
 # 왼쪽에는 로고
 col1.image(app_logo, width=2054)
@@ -28,10 +28,7 @@ col1.image(app_logo, width=2054)
 col2.markdown(
     """
     # DepressLLM  
-    DepressLLM was developed through domain‑adaptive fine‑tuning of the GPT‑4.1 model.  
-    We are currently preparing a paper entitled  
-    **‘A Domain‑Adapted Large Language Model Leveraging Real‑World Narrative Recordings  
-    for Interpretable Depression Detection.’**
+    DepressLLM was developed through domain‑adaptive fine‑tuning of the GPT‑4.1 model. We are currently preparing a paper entitled **‘A Domain‑Adapted Large Language Model Leveraging Real‑World Narrative Recordings for Interpretable Depression Detection.’**
     """,
     unsafe_allow_html=True
 )
