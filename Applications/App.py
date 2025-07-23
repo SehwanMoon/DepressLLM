@@ -198,7 +198,7 @@ st.markdown(
       </span>
       &amp;
       <span style="color:#004098; font-weight:bold;">
-        Chonnam National University
+        Chonnam National University Hospital
       </span>
     </p>
     """,
