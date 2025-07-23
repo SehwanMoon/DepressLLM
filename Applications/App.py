@@ -14,17 +14,11 @@ client = OpenAI(api_key=API_KEY)
 # ------------------------------------------
 # App Layout
 # ------------------------------------------
-logo_path = "DepressLLM/Applications/logo.png"
-st.set_page_config(page_title="Depression Prediction App", layout="centered")
-st.markdown(
-    f"""
-    <h1 style="display: flex; align-items: center;">
-      <img src="{logo_path}" width="40" style="margin-right: 8px;"/>
-      Depression Prediction with Explanation &amp; Confidence
-    </h1>
-    """,
-    unsafe_allow_html=True
-)
+logo_path = "logo.png"  
+
+col1, col2 = st.columns([1, 8])
+col1.image(logo_path, width=40)
+col2.title("Depression Prediction with Explanation & Confidence")
 
 # ------------------------------------------
 # User Inputs
