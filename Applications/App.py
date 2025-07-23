@@ -22,7 +22,7 @@ app_logo      = os.path.join(BASE_DIR, "logo.png")
 col1, col2 = st.columns([3, 7])
 
 # 왼쪽에는 로고
-col1.image(app_logo width=2054)
+col1.image(app_logo, width=2054)
 
 # 오른쪽에는 제목과 설명
 col2.markdown(
