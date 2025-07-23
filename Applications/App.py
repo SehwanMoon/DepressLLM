@@ -208,19 +208,15 @@ st.markdown(
 # 2개 컬럼으로 간단히
 col1, col2 = st.columns(2)
 
-# 컬럼 폭에 맞춰 자동 크기 조정
-col1.image(os.path.join(BASE_DIR, "etri2.png"),    use_column_width=True)
-col2.image(os.path.join(BASE_DIR, "chonnam.png"),  use_column_width=True)
+# HTML로 퍼센트 너비 지정
+etri_url   = os.path.join(BASE_DIR, "etri2.png")
+chonnam_url= os.path.join(BASE_DIR, "chonnam.png")
 
-# 바로 아래에 가운데 텍스트
-st.markdown(
-    """
-    <p style="text-align:center; font-size:14px; margin-top:0.5rem;">
-      Developed by
-      <span style="color:#005CA9; font-weight:bold;">ETRI</span>
-      &amp;
-      <span style="color:#007847; font-weight:bold;">Chonnam National University</span>
-    </p>
-    """,
+col1.markdown(
+    f'<img src="file://{etri_url}" style="width:46%; height:auto; display:block; margin:0 auto;" />',
+    unsafe_allow_html=True
+)
+col2.markdown(
+    f'<img src="file://{chonnam_url}" style="width:50%; height:auto; display:block; margin:0 auto;" />',
     unsafe_allow_html=True
 )
