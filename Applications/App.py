@@ -3,7 +3,7 @@ import openai
 import numpy as np
 import pandas as pd
 from openai import OpenAI
-
+import os
 # ------------------------------------------
 # 설정
 # ------------------------------------------
