@@ -146,7 +146,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-f0, f1, f4,f2, f3  = st.columns([1.5,1,1,1.1,1.5])
+f0, f1, f4,f2, f3  = st.columns([1.7,1,0.5,1.1,1.7])
 f1.image( os.path.join(BASE_DIR, "etri2.png"),    width=2056)
 f2.image(os.path.join(BASE_DIR, "chonnam.png"), width=2056)
 
