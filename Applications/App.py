@@ -227,7 +227,6 @@ col1.markdown(
 )
 col2.markdown(
     f'<img src="data:image/png;base64,{chonnam_b64}" '
-    'style="width:50
-    %; height:auto; display:block; margin:0 auto;" />',
+    'style="width:50%; height:auto; display:block; margin:0 auto;" />',
     unsafe_allow_html=True
 )
