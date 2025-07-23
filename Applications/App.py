@@ -14,12 +14,22 @@ client = OpenAI(api_key=API_KEY)
 # ------------------------------------------
 # App Layout
 # ------------------------------------------
-logo_url = "https://raw.githubusercontent.com/SehwanMoon/DepressLLM/Applications/logo.png"
+app_logo      = "https://raw.githubusercontent.com/SehwanMoon/DepressLLM/Applications/logo.png"
+chonnam_logo  =  "https://raw.githubusercontent.com/SehwanMoon/DepressLLM/Applications/chonnam.png"
+etri_logo     =  "https://raw.githubusercontent.com/SehwanMoon/DepressLLM/Applications/etri.png"
 
-col1, col2 = st.columns([1, 8])
-col1.image(logo_path, width=40)
-col2.title("Depression Prediction with Explanation & Confidence")
-
+col1, col2, col3 = st.columns([1,1,8])
+col1.image(app_logo,     width=60)
+col2.image(chonnam_logo, width=60)
+col3.image(etri_logo,    width=60)
+st.markdown(
+    """
+    ## DepressLLM  
+    _A Domain-Adapted Large Language Model Leveraging Real-World Narrative Recordings for Interpretable Depression Detection_  
+    **Developed by Chonnam National University & ETRI**  
+    """,
+    unsafe_allow_html=True
+)
 # ------------------------------------------
 # User Inputs
 # ------------------------------------------
