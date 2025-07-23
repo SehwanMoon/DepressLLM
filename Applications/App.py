@@ -132,7 +132,16 @@ if st.button("Predict Depression"):
 # ------------------------------------------
 st.markdown("---")
 st.markdown(
-    '<p>Developed by <span style="color:#005CA9; font-weight:bold;">Electronics and Telecommunications Research Institute (ETRI)</span> & Chonnam National University</p>',
+    '####  <p style="font-size:12px;">
+      Developed by 
+      <span style="color:#005CA9; font-weight:bold;">
+        Electronics and Telecommunications Research Institute (ETRI)
+      </span>
+      &amp;
+      <span style="color:#007847; font-weight:bold;">
+        Chonnam National University
+      </span>
+    </p>',
     unsafe_allow_html=True
 )
 f1, f2, f3  = st.columns([1,1.1,4])
