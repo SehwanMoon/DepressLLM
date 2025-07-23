@@ -36,7 +36,7 @@ col2.markdown(
 # ------------------------------------------
 # User Inputs
 # ------------------------------------------
-st.header("Enter Your Happiness & Distress Narratives")
+st.subheader("Enter Your Happiness & Distress Narratives")
 happy    = st.text_area("Experience of Happiness:", height=150)
 distress = st.text_area("Experience of Distress:", height=150)
 
