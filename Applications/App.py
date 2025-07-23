@@ -4,9 +4,11 @@ import numpy as np
 import pandas as pd
 from openai import OpenAI
 import os
-# ------------------------------------------
-# 설정
-# ------------------------------------------
+import random
+SEED = 42
+random.seed(SEED)
+np.random.seed(SEED)
+
 API_KEY = st.secrets["OPENAI_API_KEY"]
 FT_MODEL = st.secrets["FT_MODEL"]
 
@@ -71,7 +73,7 @@ if st.button("Predict Depression"):
         ],
         temperature=0,
         top_p=1,
-        logprobs=True,top_logprobs=20,
+        logprobs=True,top_logprobs=20,do_sample=False,
         max_tokens=2000,
     )
 
