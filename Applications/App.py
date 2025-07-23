@@ -223,7 +223,7 @@ st.markdown(
         flex-wrap: nowrap;       /* 한 줄로 고정 */
         align-items: center;
         justify-content: center;
-        gap: 1rem;               /* 로고 사이 간격 */
+        gap: 3rem;               /* 로고 사이 간격 */
     ">
       <img src="data:image/png;base64,{etri_b64}"
            style="width:37%; max-width:120px; height:auto;" />
