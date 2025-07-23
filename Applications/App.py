@@ -156,7 +156,7 @@ if st.button("Predict Depression"):
 
     # 2) axes(플롯 영역) 배경색 설정
     ax.set_facecolor('#f5f5f0')
-    ax.bar(nums, probs, color=colors, width=0.8)
+    ax.bar(nums, probs, color=colors, width=0.6)
     ax.set_xticks(nums)
     ax.set_xlabel("PHQ‑9 Score Token")
     ax.set_ylabel("Probability (%)")
