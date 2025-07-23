@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(__file__)
 
 app_logo      = os.path.join(BASE_DIR, "logo.png")
 
-col1, col2, col3 = st.columns([1,1,8])
+col1, col2, col3 = st.columns([2,1,7])
 col1.image(app_logo,     width=1080)
 
 st.markdown(
@@ -131,8 +131,8 @@ if st.button("Predict Depression"):
 # Footer: 기관 로고 & 문구
 # ------------------------------------------
 st.markdown("---")
-f1, f2, f3 = st.columns([3,2,5])
-f1.image( os.path.join(BASE_DIR, "etri.png"),    width=5012)
+f1, f2, f3 = st.columns([3,3,4])
+f1.image( os.path.join(BASE_DIR, "etri2.png"),    width=5012)
 f2.image(os.path.join(BASE_DIR, "chonnam.png"), width=2056)
 st.markdown("Developed by ETRI & Chonnam National University")
 
