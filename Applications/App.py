@@ -18,13 +18,10 @@ client = OpenAI(api_key=API_KEY)
 BASE_DIR = os.path.dirname(__file__)
 
 app_logo      = os.path.join(BASE_DIR, "logo.png")
-chonnam_logo  =  os.path.join(BASE_DIR, "chonnam.png")
-etri_logo     =  os.path.join(BASE_DIR, "etri.png")
 
 col1, col2, col3 = st.columns([1,1,8])
 col1.image(app_logo,     width=1080)
-col2.image(chonnam_logo, width=1080)
-col3.image(etri_logo,    width=1080)
+
 st.markdown(
     """
     ## DepressLLM  
@@ -125,5 +122,17 @@ if st.button("Predict Depression"):
     st.write("**Top token probabilities:**")
     st.dataframe(df_probs)
     st.write(f"**Grouped probability** (0–4 vs 5–27): {pct0_4:.2f}% vs {pct5_27:.2f}%")
+
+    
     st.write(f"**Confidence:** {confidence:.2f}")
     st.write(f"**Depression predicted?** {'Yes' if depression else 'No'}") 
+
+# ------------------------------------------
+# Footer: 기관 로고 & 문구
+# ------------------------------------------
+st.markdown("---")
+f1, f2, f3 = st.columns([1,1,8])
+f1.image( os.path.join(BASE_DIR, "etri.png"),    width=60)
+f2.image(os.path.join(BASE_DIR, "chonnam.png"), width=60)
+f3.markdown("**Developed by ETRI & Chonnam National University **")
+
