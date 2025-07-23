@@ -22,9 +22,9 @@ chonnam_logo  =  os.path.join(BASE_DIR, "chonnam.png")
 etri_logo     =  os.path.join(BASE_DIR, "etri.png")
 
 col1, col2, col3 = st.columns([1,1,8])
-col1.image(app_logo,     width=120)
-col2.image(chonnam_logo, width=120)
-col3.image(etri_logo,    width=120)
+col1.image(app_logo,     width=1080)
+col2.image(chonnam_logo, width=1080)
+col3.image(etri_logo,    width=1080)
 st.markdown(
     """
     ## DepressLLM  
