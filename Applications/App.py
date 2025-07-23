@@ -205,18 +205,29 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-# 2개 컬럼으로 간단히
+etri_path    = os.path.join(BASE_DIR, "etri2.png")
+chonnam_path = os.path.join(BASE_DIR, "chonnam.png")
+
+# Base64 인코딩 함수
+def img_b64(path):
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
+
+etri_b64    = img_b64(etri_path)
+chonnam_b64 = img_b64(chonnam_path)
+
+# Footer: 두 개 컬럼
 col1, col2 = st.columns(2)
 
-# HTML로 퍼센트 너비 지정
-etri_url   = os.path.join(BASE_DIR, "etri2.png")
-chonnam_url= os.path.join(BASE_DIR, "chonnam.png")
-
+# 컬럼 폭의 46%로 설정
 col1.markdown(
-    f'<img src="file://{etri_url}" style="width:46%; height:auto; display:block; margin:0 auto;" />',
+    f'<img src="data:image/png;base64,{etri_b64}" '
+    'style="width:46%; height:auto; display:block; margin:0 auto;" />',
     unsafe_allow_html=True
 )
 col2.markdown(
-    f'<img src="file://{chonnam_url}" style="width:50%; height:auto; display:block; margin:0 auto;" />',
+    f'<img src="data:image/png;base64,{chonnam_b64}" '
+    'style="width:50
+    %; height:auto; display:block; margin:0 auto;" />',
     unsafe_allow_html=True
 )
