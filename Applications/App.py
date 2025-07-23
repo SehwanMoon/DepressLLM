@@ -14,7 +14,8 @@ client = OpenAI(api_key=API_KEY)
 # ------------------------------------------
 # App Layout
 # ------------------------------------------
-logo_path = "logo.png"  
+BASE_DIR = os.path.dirname(__file__)
+logo_path = os.path.join(BASE_DIR, "logo.png")
 
 col1, col2 = st.columns([1, 8])
 col1.image(logo_path, width=40)
