@@ -48,8 +48,47 @@ st.markdown(
 # User Inputs
 # ------------------------------------------
 st.subheader("Enter Your Happiness & Distress Narratives")
-happy    = st.text_area("Experience of Happiness:", height=150)
-distress = st.text_area("Experience of Distress:", height=150)
+# ------------------------------------------
+# User Inputs with Example Prompts
+# ------------------------------------------
+st.subheader("Enter Your Happiness & Distress Narratives")
+
+# — Example “Happiness” narrative (3–4 paragraphs)
+example_happy = (
+    "One of my fondest childhood memories is riding my bike in the neighborhood park with my parents and siblings. "
+    "The wind in my hair and the sound of laughter all around felt like pure, unfiltered joy.\n\n"
+
+    "On my college graduation day, my family surprised me with a party I never saw coming. "
+    "Seeing my friends’ faces light up as we celebrated together gave me an overwhelming sense of pride and achievement.\n\n"
+
+    "Nowadays, I look forward to evening walks with my dog after work. "
+    "Even the smallest things—a leaf fluttering, the sunset’s glow—bring me unexpected happiness, and remind me to appreciate life’s simple pleasures."
+)
+
+# — Example “Distress” narrative (3–4 paragraphs)
+example_distress = (
+    "Last winter, ending a long-term relationship hit me harder than I imagined. "
+    "Nights were the worst—lying awake, replaying every moment, wondering why things fell apart.\n\n"
+
+    "Around the same time, a project at work collapsed, and I felt the weight of criticism from colleagues. "
+    "Despite my best efforts, I couldn’t shake the feeling of worthlessness, and my appetite and sleep completely unraveled.\n\n"
+
+    "Lately, I’ve found myself cancelling plans with friends and spending too much time alone. "
+    "The thought that ‘the world has abandoned me’ has become an unwelcome mantra, making it harder each day to keep going."
+)
+
+# Pre-populate the text areas with these examples
+happy = st.text_area(
+    "Experience of Happiness:",
+    value=example_happy,
+    height=200
+)
+distress = st.text_area(
+    "Experience of Distress:",
+    value=example_distress,
+    height=200
+)
+
 
 # ------------------------------------------
 # Prediction Trigger
