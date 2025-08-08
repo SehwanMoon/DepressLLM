@@ -48,10 +48,6 @@ st.markdown(
 # User Inputs
 # ------------------------------------------
 st.subheader("Enter Your Happiness & Distress Narratives")
-# ------------------------------------------
-# User Inputs with Example Prompts
-# ------------------------------------------
-st.subheader("Enter Your Happiness & Distress Narratives")
 
 # — Example “Happiness” narrative (3–4 paragraphs)
 example_happy = (
