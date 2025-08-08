@@ -92,9 +92,6 @@ if st.button("Predict Depression"):
     content = response.choices[0].message.content
     lines   = content.splitlines()
     import re
-    print(content)
-    m = re.match(r"PHQ-9 score:\s*(\d+)", lines[0])
-    score = int(m.group(1))
     explanation = ""
     significant = ""
     for line in lines:
@@ -141,7 +138,6 @@ if st.button("Predict Depression"):
     # --------------------------------------
     # Display Results
     # --------------------------------------
-    st.markdown(f"Predicted PHQ-9 Score: {score}")
     st.markdown(f"**Explanation:** {explanation}")
     st.markdown(f"**Significant words/phrases:** {significant}")
     st.markdown("---")
