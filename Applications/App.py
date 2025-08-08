@@ -67,10 +67,7 @@ example_distress = (
     "Nights were the worst—lying awake, replaying every moment, wondering why things fell apart.\n\n"
 
     "Around the same time, a project at work collapsed, and I felt the weight of criticism from colleagues. "
-    "Despite my best efforts, I couldn’t shake the feeling of worthlessness, and my appetite and sleep completely unraveled.\n\n"
-
-    "Lately, I’ve found myself cancelling plans with friends and spending too much time alone. "
-    "The thought that ‘the world has abandoned me’ has become an unwelcome mantra, making it harder each day to keep going."
+    "Despite my best efforts, I couldn’t shake the feeling of worthlessness, and my appetite and sleep completely unraveled."
 )
 
 # Pre-populate the text areas with these examples
