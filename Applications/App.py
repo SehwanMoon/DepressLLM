@@ -92,7 +92,7 @@ if st.button("Predict Depression"):
     content = response.choices[0].message.content
     lines   = content.splitlines()
     import re
-    print( lines[0])
+    print(content)
     m = re.match(r"PHQ-9 score:\s*(\d+)", lines[0])
     score = int(m.group(1))
     explanation = ""
